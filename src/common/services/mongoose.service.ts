@@ -5,9 +5,7 @@ import * as dotenv from 'dotenv'
 
 import { MongoMemoryServer } from 'mongodb-memory-server'
 
-dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`
-})
+dotenv.config()
 
 const log: debug.IDebugger = debug('app:mongoose-service')
 
