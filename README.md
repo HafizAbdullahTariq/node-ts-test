@@ -14,13 +14,21 @@
 ## Setup and Usages
 
 Run this command `npm install` or `yarn install`
+<br/>
 Unzip data file `cities_canada-usa.tsv.zip`
+<br/>
 Run following command to import data into mongodb
+<br/>
 `mongoimport --db suggestion_db --collection suggestions --type tsv --file cities_canada-usa.tsv --headerline`
+<br/>
 Run this project `npm run start:dev` or `yarn run start:dev`.
+<br/>
 Run following curl requst for data migration.
+<br/>
 `curl --location --request GET 'http://localhost:3000/api/suggestion/migrate'`
+<br/>
 Run following curl request to get suggestions
+<br/>
 `curl --location --request GET 'http://localhost:3000/api/suggestion?q=Amherst&latitude=43.70011&longitude=-79.4163&radius=5&sort=distance'`
 
 <br/>
