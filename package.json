@@ -8,7 +8,7 @@
     "build": "tsc --project './tsconfig.json'",
     "start:dev": "export DEBUG=* && export NODE_ENV=developer && ts-node-dev --files --inspect --respawn --pretty --transpile-only src/app.ts",
     "test:integration": "export NODE_ENV=test && tsc && mocha -r dotenv/config -r ts-node/register 'src/**/__test__/integration/*.spec.ts' --unhandled-rejections=strict",
-    "test:unit": "export NODE_ENV=test && tsc && mocha -r dotenv/config -r ts-node/register 'src/**/__test__/unit/*.spec.ts' --files --unhandled-rejections=strict"
+    "test:unit": "export NODE_ENV=test && tsc && mocha -r dotenv/config -r ts-node/register 'src/**/**/*.spec.ts' --files --unhandled-rejections=strict"
   },
   "author": "Hafiz Abdullah Tariq",
   "dependencies": {

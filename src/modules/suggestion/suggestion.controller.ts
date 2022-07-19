@@ -7,9 +7,11 @@ import suggestionService from './suggestion.service'
 class SuggestionsController {
   //Create a new suggestion
   async suggestion(req: express.Request, res: express.Response) {
-    return res.status(200).json(await suggestionService.searchSuggestion(req.query))
+    return res
+      .status(200)
+      .json(await suggestionService.searchSuggestion(req.query as any))
   }
-  async migrate(req: express.Request, res: express.Response) {
+  async migrate(_: express.Request, res: express.Response) {
     return res.status(200).json(await suggestionService.migrate())
   }
 }

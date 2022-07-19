@@ -4,5 +4,5 @@ export class SuggestionDto {
   latitude?: number
   longitude?: number
   radius?: number
-  sort: string
+  sort?: string
 }

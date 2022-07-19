@@ -60,13 +60,14 @@ export const suggestionSchema = new mongooseObj.Schema(
     admin4: { type: String },
     elevation: { type: String },
     tz: { type: String },
+    location: { type: Object },
     modified_at: { type: String }
   },
   {
     timestamps: false
   }
 )
-
+suggestionSchema.index({ location: '2dsphere' })
 export interface SuggestionDocument extends SuggestionClass, Document {}
 
 export const suggestionModel = mongooseService
